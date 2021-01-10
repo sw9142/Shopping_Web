@@ -1,0 +1,579 @@
+/* Add any CSS you need to this file.
+
+
+font-family: 'PT Sans', sans-serif;
+font-family: 'Sansita Swashed', cursive;
+ font-family: 'Playfair Display', serif;
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=PT+Sans&family=Sansita+Swashed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: black;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #bdc192;
+}
+header {
+  background-color: #fcc37587;
+}
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: coral;
+}
+#logo a:active,
+#logo a:hover {
+  color: black;
+}
+#firstStripe {
+  background-color: #bdc192;
+  text-align: center;
+  padding: 0.6em;
+  position: relative;
+}
+
+#firstStripe h3 {
+  font-size: 1vw;
+  margin: 0em;
+  letter-spacing: 5px;
+}
+
+/*----------------second Stripe ---------------------*/
+#secondStripe {
+  margin-bottom: 0em;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+}
+#imenu i {
+  width: 7vw;
+  font-size: 2.5vw;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+#imenucontents {
+  margin: 0;
+  width: 40vw;
+  height: 50vw;
+  left: 0;
+  top: 0;
+  background-color: rgb(195 210 220 / 78%);
+  position: absolute;
+  z-index: 2;
+}
+#imenucontents ul {
+  margin-top: 1em;
+}
+#imenucontents ul li {
+  font-size: 1.8vw;
+  font-family: 'Sansita Swashed', cursive;
+  padding: 0.5em;
+  list-style: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#closebutton {
+  margin: 0.5em;
+  padding: 1em;
+  padding-bottom: 1em;
+  cursor: pointer;
+  font-size: 2vw;
+  font-weight: bolder;
+}
+#searchbox {
+  display: flex;
+  justify-content: left;
+}
+#searchbox i {
+  font-size: 3vw;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 0em;
+}
+#searchbox form {
+  margin: 0.5em;
+}
+#searchbox form #searchinput {
+  padding: 0.7vw;
+  width: 17vw;
+  font-size: 1vw;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+}
+#searchbox form #submit {
+  padding: 0.7vw;
+  font-size: 1vw;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+}
+
+#submit:hover {
+  background-color: rgba(130, 117, 250, 0.473);
+}
+#personalaccount i {
+  font-size: 3vw;
+  text-align: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  cursor: pointer;
+}
+
+#homeicon {
+  padding-top: 0.5em;
+  padding-right: 1em;
+}
+
+#homeicon i {
+  font-size: 3vw;
+  padding-right: 1em;
+}
+
+#person:hover,
+#shopcart:hover,
+#searchicon2:hover {
+  font-size: 2.6vw;
+}
+
+#secondStripe h1 {
+  width: 30px;
+  font-family: 'Sansita Swashed', cursive;
+  text-align: center;
+  flex: 1;
+  font-size: 7vw;
+  margin: 0.3em;
+}
+/*-------------------navigation----------------------*/
+
+#menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e9edbb;
+  border-bottom: 1.5px solid #9ea17b;
+  position: relative;
+  border-radius: 2px;
+}
+
+#contactusbtn {
+  font-family: 'Playfair Display', serif;
+}
+
+#contactusbtn,
+#skincarebtn,
+#makeupbtn,
+#bodybtn {
+  font-size: 1.5vw;
+  padding: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+}
+
+.skincards,
+.makeupcards,
+.bodycards {
+  display: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#skincarewrapper,
+#makeupwrapper,
+#bodywrapper {
+  width: 18vw;
+  height: 30vw;
+  background-color: rgb(248, 248, 242);
+  position: absolute;
+  right: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 6;
+}
+.skincards ul,
+.makeupcards ul,
+.bodycards ul {
+  margin: 0;
+  padding: 0.5em;
+}
+
+.skincards ul li,
+.makeupcards ul li,
+.bodycards ul li {
+  font-size: 1.2vw;
+  font-weight: bold;
+  list-style: none;
+  padding: 0.9em;
+}
+.skincards #bestseller,
+.makeupcards #mkbestseller,
+.bodycards #bybestseller {
+  position: absolute;
+  background-color: rgb(248, 248, 242);
+  top: 4.3vw;
+  left: 39vw;
+  height: 30vw;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 45vw;
+  justify-content: space-around;
+}
+
+@media (min-width: 1240px) {
+  .skincards #bestseller,
+  .makeupcards #mkbestseller,
+  .bodycards #bybestseller {
+    top: 4.3vw;
+    left: 37vw;
+  }
+
+  .skincards ul,
+  .makeupcards ul,
+  .bodycards ul {
+    margin: 0;
+    padding: 2em;
+  }
+
+  .skincards ul li,
+  .makeupcards ul li,
+  .bodycards ul li {
+    font-size: 1.2vw;
+    font-weight: bold;
+    list-style: none;
+    padding: 0.9em;
+  }
+}
+
+#bslotion,
+#bswhiteserum,
+#bsblackserum,
+#bsblusher,
+#bseyeshadow,
+#bslipstick,
+#bsbalm,
+#bsbodylotion,
+#bsdeodorant {
+  width: 10.5vw;
+  height: 9vw;
+}
+
+.skincards #bestseller h3,
+.makeupcards #mkbestseller h3,
+.bodycards #bybestseller h3 {
+  width: 100%;
+  font-size: 1.5vw;
+  text-align: center;
+  padding-top: 0.5em;
+}
+.bodycards #bybestseller #bybestsellerbox {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.makeupcards #mkbestseller #mkbestsellerbox,
+.bodycards #bybestseller #bybestsellerbox {
+  text-align: center;
+  display: flex;
+  padding-top: 1.1em;
+  justify-content: space-between;
+}
+
+.skincards #bestseller p,
+.makeupcards #mkbestseller p,
+.bodycards #bybestseller p {
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+#skincare:hover .skincards,
+#makeup:hover .makeupcards,
+#body:hover .bodycards {
+  display: block;
+}
+
+/*--------------------------main----------------------------------*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 4em;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 110vw;
+}
+
+#background2 {
+  flex: 1;
+  margin-top: 800px;
+  position: absolute;
+  width: 100%;
+  height: 130vw;
+  opacity: 0.3;
+}
+main section {
+  flex: 1;
+  position: relative;
+}
+#imgmain {
+  max-width: 60%;
+  height: auto;
+  padding-left: 7vw;
+  cursor: pointer;
+  margin-top: 2em;
+  position: relative;
+}
+
+.emptybox {
+  position: absolute;
+  bottom: 10em;
+  padding: 0.2em;
+  padding-left: 2vw;
+  margin-left: 60vw;
+  margin-top: 2vw;
+  background-color: #efd3d3a3;
+  width: 24%;
+  height: 40%;
+  font-size: 2vw;
+  border: solid 1px coral;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  z-index: 1;
+}
+#headp {
+  font-size: 3vw;
+}
+#subp {
+  font-size: 2.2vw;
+  margin-top: 0.2em;
+  padding-left: 8vw;
+}
+
+#lmtdedition {
+  position: absolute;
+  top: 4.5em;
+  right: 2vw;
+  width: 20vw;
+  font-size: 1.9vw;
+  text-align: right;
+  padding-bottom: 1.4em;
+}
+
+#tothetop {
+  position: fixed;
+  bottom: 10rem;
+  right: 1rem;
+  padding: 0.8vw;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 2vw;
+  background-color: rgba(240, 223, 145, 0.822);
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 7px;
+}
+
+#bestsellersatmain,
+#skincareatmain,
+#makeupatmain,
+#bodyatmain {
+  margin-top: 20px;
+  margin-bottom: 10vw;
+  margin-left: 3em;
+  margin-right: 3em;
+  height: 20px;
+  width: 100%;
+  font-size: 5vw;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+#bodysectiontwo,
+#bodysectionthree,
+#bodysectionfour,
+#bodysectionfive {
+  padding-top: 15vw;
+  height: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  #bodysectiontwo,
+  #bodysectionthree,
+  #bodysectionfour,
+  #bodysectionfive {
+    width: 90%;
+  }
+}
+
+#bodysectiontwo img,
+#bodysectionthree img,
+#bodysectionfour img,
+#bodysectionfive img {
+  width: 25vw;
+  height: 20vw;
+  border-radius: 3px;
+  padding-top: 1vw;
+}
+
+#bodysectiontwo .img-card,
+#bodysectionthree .img-card,
+#bodysectionfour .img-card,
+#bodysectionfive .img-card {
+  background-color: rgba(247, 229, 229, 0.336);
+  width: 28vw;
+  text-align: center;
+  margin-top: 2vw;
+}
+#bodysectiontwo .img-card div,
+#bodysectionthree .img-card div,
+#bodysectionfour .img-card div,
+#bodysectionfive .img-card div {
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2vw;
+}
+
+main .img-card:hover {
+  transform: scale(1.1);
+}
+/*--------------------------footer---------------------------------*/
+
+#bottomstripe {
+  padding-top: 2em;
+  height: 75vw;
+  padding: 1em;
+  padding-bottom: 3em;
+  background-color: #fcc37587;
+  position: relative;
+}
+#bottomstripe ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 2px;
+  font-size: 2.4vw;
+}
+
+#bottomstripe ul li {
+  padding: 0.3em;
+  font-weight: bold;
+}
+#aboutcompany {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+#aboutcompany #logo2,
+#customerservice,
+#privacyandterms {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 3.3vw;
+}
+
+#socialwithsubscription {
+  position: absolute;
+  width: 90vw;
+  top: 40vw;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+}
+.subscribebox {
+  text-align: center;
+  width: 70vw;
+  padding-bottom: 1em;
+  padding-top: 3vw;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(181, 206, 235, 0.185);
+}
+
+#subscribeus {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 4vw;
+  margin: 0.2em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  font-style: italic;
+}
+
+#subscribeus2 {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 2vw;
+  margin: 1em;
+  text-align: center;
+}
+
+#subscribe {
+}
+
+#sub_subscribe {
+  width: 30vw;
+  font-size: 1.2vw;
+}
+#sub_submit {
+  padding: 0.7vw;
+  font-size: 1vw;
+  background-color: rgba(205, 208, 247, 0.562);
+  border: 1px solid;
+}
+
+#socialmedias {
+  margin-right: auto;
+  margin-left: auto;
+}
+#socialmedias a img {
+  padding: 1.2em;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 3vw;
+}
+
+#facebook:hover,
+#instagram:hover,
+#twitter:hover,
+#youtube:hover {
+  width: 2em;
+  height: 2em;
+}

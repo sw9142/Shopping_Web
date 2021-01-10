@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <div id="firstStripe">
+        <h3 style="font-weight: bolder;">FreeShipping On All Orders!</h3>
+      </div>
+      <!---------------- second stripe -------------->
+
+      <div id="secondStripe">
+        <div class="imenuwrapper">
+          <div id="imenu">
+            <i class="material-icons" id="menuicon">menu</i>
+            <div id="imenucontents">
+              <div id="closebutton">X</div>
+              <ul>
+                <li><a href="#skincareatmain">Skin Care</a></li>
+                <li><a href="#makeupatmain"> Make Up</a></li>
+                <li><a href="#bodyatmain"> Bath & Body</a></li>
+                <li><a href="#aboutshrimpbox">About Us</a></li>
+                <li><a href="./contact_us.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="searchbox">
+          <div id="searchicon">
+            <i class="material-icons" id="searchicon2">search</i>
+          </div>
+          <form action="./search" method="GET" id="search" name="search">
+            <input
+              id="searchinput"
+              autocomplete="on"
+              type="text"
+              placeholder="what would you like to search?"
+            />
+            <input id="submit" type="submit" value="Search" />
+          </form>
+        </div>
+        <h1 id="logo" style="font-weight: bolder;"><a href="./">Shrimp</a></h1>
+        <div id="personalaccount">
+          <i class="material-icons" id="home"><a href="./"> home</a></i>
+          <i class="material-icons" id="shopcart">shopping_cart</i>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container mt-4 mb-4">
+        <form id="contactus-form" action="https://httpbin.org/post" name="contactus" method="POST">
+          <!---------------------------------1 row---------------------------------->
+          <div class="row">
+            <div class="col form-group">
+              <label for="fname"><span class="text-danger">* </span>First Name</label>
+
+              <input
+                id="fname"
+                class="form-control"
+                name="fname"
+                type="text"
+                autocomplete="given-name"
+                tabindex="1"
+                autofocus
+                required
+              />
+            </div>
+
+            <div class="col form-group">
+              <label for="lname"><span class="text-danger">* </span>Last Name</label>
+
+              <input
+                id="lname"
+                class="form-control"
+                name="lname"
+                type="text"
+                autocomplete="family-name"
+                tabindex="2"
+                required
+              />
+            </div>
+          </div>
+          <!---------------------------------2 row---------------------------------->
+          <div class="row">
+            <div class="col form-group">
+              <label for="email"><span class="text-danger">* </span>Email</label>
+
+              <input
+                id="email"
+                class="form-control"
+                name="email"
+                autocomplete="email"
+                type="email"
+                tabindex="3"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col form-group">
+              <label for="address"><span class="text-danger">* </span>Address</label>
+
+              <input
+                id="address"
+                class="form-control"
+                name="address"
+                type="text"
+                autocomplete="address-level1"
+                tabindex="4"
+                required
+              />
+            </div>
+          </div>
+          <!--------------------------------- 3 row---------------------------------->
+          <div class="row">
+            <div class="col form-group">
+              <label for="city"><span class="text-danger">* </span>city</label>
+              <select
+                id="city"
+                class="form-control"
+                name="city"
+                autocomplete="address-level2"
+                tabindex="5"
+              >
+                <option>Quebec City</option>
+                <option>Vancouver</option>
+                <option>Calgary</option>
+                <option>Ottawa</option>
+                <option>St. John's</option>
+                <option>Charlottetown</option>
+                <option>Saskatoon</option>
+                <option>Whitehorse</option>
+                <option selected>Toronto</option>
+                <option>Halifax</option>
+                <option>Banff</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col form-group">
+              <label for="province">Province</label>
+
+              <select
+                id="province"
+                class="form-control"
+                name="province"
+                autocomplete="address-level2"
+                tabindex="6"
+              >
+                <option>Alberta</option>
+                <option>British Columbia</option>
+                <option>Manitoba</option>
+                <option>New Brunswick</option>
+                <option>Newfoundland and Labrador</option>
+                <option>Northwest Territories</option>
+                <option>Nova Scotia</option>
+                <option>Nunavut</option>
+                <option selected>Ontario</option>
+                <option>Saskatchewan</option>
+                <option>Yukon</option>
+              </select>
+              <small class="form-text text-muted ml-2 mt-1">Optional</small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col form-group">
+              <label for="postalcode"><span class="text-danger">* </span>Postal Code</label>
+
+              <input
+                id="postalcode"
+                class="form-control"
+                name="postalcode"
+                autocomplete="postal-code"
+                type="text"
+                placeholder="ex) A1B 2C3"
+                pattern="^[A-Za-z]\d[A-Za-z][ -]\d[A-Za-z]\d$"
+                tabindex="7"
+                required
+              />
+            </div>
+          </div>
+          <!---------------------------------4 row---------------------------------->
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="inlineRadio1"
+              value="question"
+              tabindex="8"
+            />
+            <label class="form-check-label" for="inlineRadio1">Question</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="inlineRadio2"
+              value="Comments"
+              tabindex="9"
+            />
+            <label class="form-check-label" for="inlineRadio2">Comments</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="inlineRadio3"
+              value="Order"
+              tabindex="10"
+            />
+            <label class="form-check-label" for="inlineRadio3">Order Problem</label>
+          </div>
+          <div id="ordernumberbox">
+            <input
+              id="ordernumber"
+              class="form-control"
+              name="ordernumber"
+              type="text"
+              placeholder="Enter the order number..."
+            />
+          </div>
+          <!---------------------------------5 row---------------------------------->
+          <div class="row">
+            <div class="form-group col mt-3">
+              <textarea
+                id="textarea"
+                class="form-control"
+                rows="8"
+                name="textarea"
+                tabindex="11"
+                required
+              >
+              </textarea>
+            </div>
+          </div>
+
+          <div class="d-flex flex-row-reverse">
+            <input
+              class="btn btn-primary"
+              type="submit"
+              name="submit"
+              value="Submit"
+              tabindex="12"
+            />
+            <input
+              class="btn btn-secondary mr-2"
+              type="reset"
+              name="reset"
+              value="Reset"
+              tabindex="113"
+            />
+          </div>
+          <input id="hidden" name="hidden" value="Sewon Choi" type="hidden" />
+        </form>
+      </div>
+    </main>
+    <footer>
+      <section>
+        <div id="bottomstripe">
+          <div id="aboutcompany">
+            <div id="aboutshrimpbox">
+              <div id="logo2"><a href="http://localhost:3000/">About Shrimp</a></div>
+              <ul>
+                <li><a href="">Our Story</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Find a Stores</a></li>
+                <li><a href="">Events</a></li>
+              </ul>
+            </div>
+            <div id="customerservicebox">
+              <div id="customerservice">Customer Service</div>
+              <ul>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">FAQs</a></li>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">Return</a></li>
+              </ul>
+            </div>
+            <div id="privacyandtermsbox">
+              <div id="privacyandterms">Privacy & Terms</div>
+              <ul>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Information</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Accessibility</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./contact.js"></script>
+  </body>
+</html>
